@@ -83,53 +83,33 @@ Add the following public member functions so the ClapTrap looks more realistic:
 • void attack(const std::string& target);
 • void takeDamage(unsigned int amount);
 • void beRepaired(unsigned int amount);
-When ClapTrack attacks, it causes its target to lose <attack damage> hit points.
-When ClapTrap repairs itself, it gets <amount> hit points back. Attacking and repairing
-cost 1 energy point each. Of course, ClapTrap can’t do anything if it has no hit points
-or energy points left.
-
-5
-
-C++ - Module 03
-
-Inheritance
-
-In all of these member functions, you have to print a message to describe what happens. For example, the attack() function may display something like (of course, without
-the angle brackets):
+When ClapTrack attacks, it causes its target to lose <attack damage> hit points. When ClapTrap repairs itself, it gets <amount> hit points back. Attacking and repairing cost 1 energy point each. Of course, ClapTrap can’t do anything if it has no hit points or energy points left.
+In all of these member functions, you have to print a message to describe what happens. For example, the attack() function may display something like (of course, without the angle brackets):
 ClapTrap <name> attacks <target>, causing <damage> points of damage!
-The constructors and destructor must also display a message, so your peer-evaluators
-can easily see they have been called.
+The constructors and destructor must also display a message, so your peer-evaluators can easily see they have been called.
 Implement and turn in your own tests to ensure your code works as expected.
 
-6
+## Chapter IV
 
-Chapter IV
 Exercise 01: Serena, my love!
 Exercise : 01
-Serena, my love!
+**Serena, my love!**
 Turn-in directory : ex01/
-Files to turn in : Files from previous exercise + ScavTrap.{h, hpp},
-ScavTrap.cpp
+Files to turn in : Files from previous exercise + ScavTrap.{h, hpp}, ScavTrap.cpp
 Forbidden functions : None
 
-Because you can never have enough ClapTraps, you will now create a derived robot.
-It will be named ScavTrap and will inherit the constructors and destructor from ClapTrap. However, its constructors, destructor and attack() will print different messages.
-After all, ClapTraps are aware of their individuality.
+Because you can never have enough ClapTraps, you will now create a derived robot. It will be named ScavTrap and will inherit the constructors and destructor from ClapTrap. However, its constructors, destructor and attack() will print different messages. After all, ClapTraps are aware of their individuality.
 Note that proper construction/destruction chaining must be shown in your tests.
-When a ScavTrap is created, the program starts by building a ClapTrap. Destruction is
-in reverse order. Why?
-ScavTrap will use the attributes of ClapTrap (update ClapTrap in consequence) and
-must initialize them to:
+When a ScavTrap is created, the program starts by building a ClapTrap. Destruction is in reverse order. Why?
+ScavTrap will use the attributes of ClapTrap (update ClapTrap in consequence) and must initialize them to:
 • Name, which is passed as parameter to a constructor
 • Hit points (100), represent the health of the ClapTrap
 • Energy points (50)
 • Attack damage (20)
 ScavTrap will also have its own special capacity:
 void guardGate();
-This member function will display a message informing that ScavTrap is now in Gate
-keeper mode.
+This member function will display a message informing that ScavTrap is now in Gate keeper mode.
 Don’t forget to add more tests to your program.
-7
 
 Chapter V
 Exercise 02: Repetitive work

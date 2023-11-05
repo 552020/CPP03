@@ -116,8 +116,7 @@ Exercise 02: Repetitive work
 Exercise : 02
 **Repetitive work**
 Turn-in directory : ex02/
-Files to turn in : Files from previous exercises + FragTrap.{h, hpp},
-FragTrap.cpp
+Files to turn in : Files from previous exercises + FragTrap.{h, hpp}, FragTrap.cpp
 Forbidden functions : None
 
 Making ClapTraps is probably starting to get on your nerves.
@@ -127,10 +126,8 @@ Same things for the attributes, but with different values this time:
 • Hit points (100), represent the health of the ClapTrap
 • Energy points (100)
 • Attack damage (30)
-FragTrap has a special capacity too:
-void highFivesGuys(void);
-This member function displays a positive high fives request on the standard output.
-Again, add more tests to your program.
+FragTrap has a special capacity too: `void highFivesGuys(void);`
+This member function displays a positive high fives request on the standard output. Again, add more tests to your program.
 
 ## Chapter VI
 
@@ -138,19 +135,14 @@ Exercise 03: Now it’s weird!
 Exercise : 03
 **Now it’s weird!**
 Turn-in directory : ex03/
-Files to turn in : Files from previous exercises + DiamondTrap.{h, hpp},
-DiamondTrap.cpp
+Files to turn in : Files from previous exercises + DiamondTrap.{h, hpp}, DiamondTrap.cpp
 Forbidden functions : None
 
-In this exercise, you will create a monster: a ClapTrap that’s half FragTrap, half
-ScavTrap. It will be named DiamondTrap, and it will inherit from both the FragTrap
-AND the ScavTrap. This is so risky!
-The DiamondTrap class will have a name private attribute. Give to this attribute
-exactly the same variable’s name (not talking about the robot’s name here) than the one
-in the ClapTrap base class.
+In this exercise, you will create a monster: a ClapTrap that’s half FragTrap, half ScavTrap. It will be named DiamondTrap, and it will inherit from both the _FragTrap AND the ScavTrap_. This is so risky!
+The DiamondTrap class will have a name private attribute. Give to this attribute exactly the same variable’s name (not talking about the robot’s name here) than the one in the ClapTrap base class.
 To be more clear, here are two examples.
-If ClapTrap’s variable is name, give the name name to the one of the DiamondTrap.
-If ClapTrap’s variable is \_name, give the name \_name to the one of the DiamondTrap.
+If ClapTrap’s variable is `name`, give the name `name` to the one of the DiamondTrap.
+If ClapTrap’s variable is `_name`, give the name `_name` to the one of the DiamondTrap.
 Its attributes and member functions will be picked from either one of its parent classes:
 • Name, which is passed as parameter to a constructor
 • ClapTrap::name (parameter of the constructor + "\_clap_name" suffix)
@@ -161,8 +153,7 @@ Its attributes and member functions will be picked from either one of its parent
 
 In addition to the special functions of both its parent classes, DiamondTrap will have its own special capacity: `void whoAmI();`
 This member function will display both its name and its ClapTrap name.
-Of course, the ClapTrap subobject of the DiamondTrap will be created once, and only
-once. Yes, there’s a trick.
+Of course, the ClapTrap subobject of the DiamondTrap will be created once, and only once. Yes, there’s a trick.
 Again, add more tests to your program.
 
 Do you know the -Wshadow and -Wno-shadow compiler flags?

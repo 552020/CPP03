@@ -106,25 +106,22 @@ ScavTrap will use the attributes of ClapTrap (update ClapTrap in consequence) an
 • Hit points (100), represent the health of the ClapTrap
 • Energy points (50)
 • Attack damage (20)
-ScavTrap will also have its own special capacity:
-void guardGate();
+ScavTrap will also have its own special capacity: `void guardGate();`
 This member function will display a message informing that ScavTrap is now in Gate keeper mode.
 Don’t forget to add more tests to your program.
 
-Chapter V
+## Chapter V
+
 Exercise 02: Repetitive work
 Exercise : 02
-Repetitive work
+**Repetitive work**
 Turn-in directory : ex02/
 Files to turn in : Files from previous exercises + FragTrap.{h, hpp},
 FragTrap.cpp
 Forbidden functions : None
 
 Making ClapTraps is probably starting to get on your nerves.
-Now, implement a FragTrap class that inherits from ClapTrap. It is very similar to
-ScavTrap. However, its construction and destruction messages must be different. Proper
-construction/destruction chaining must be shown in your tests. When a FragTrap is
-created, the program starts by building a ClapTrap. Destruction is in reverse order.
+Now, implement a FragTrap class that inherits from ClapTrap. It is very similar to ScavTrap. However, its construction and destruction messages must be different. Proper construction/destruction chaining must be shown in your tests. When a FragTrap is created, the program starts by building a ClapTrap. Destruction is in reverse order.
 Same things for the attributes, but with different values this time:
 • Name, which is passed as parameter to a constructor
 • Hit points (100), represent the health of the ClapTrap
@@ -135,12 +132,11 @@ void highFivesGuys(void);
 This member function displays a positive high fives request on the standard output.
 Again, add more tests to your program.
 
-8
+## Chapter VI
 
-Chapter VI
 Exercise 03: Now it’s weird!
 Exercise : 03
-Now it’s weird!
+**Now it’s weird!**
 Turn-in directory : ex03/
 Files to turn in : Files from previous exercises + DiamondTrap.{h, hpp},
 DiamondTrap.cpp
@@ -163,15 +159,7 @@ Its attributes and member functions will be picked from either one of its parent
 • Attack damage (FragTrap)
 • attack() (Scavtrap)
 
-9
-
-C++ - Module 03
-
-Inheritance
-
-In addition to the special functions of both its parent classes, DiamondTrap will have
-its own special capacity:
-void whoAmI();
+In addition to the special functions of both its parent classes, DiamondTrap will have its own special capacity: `void whoAmI();`
 This member function will display both its name and its ClapTrap name.
 Of course, the ClapTrap subobject of the DiamondTrap will be created once, and only
 once. Yes, there’s a trick.
@@ -181,9 +169,8 @@ Do you know the -Wshadow and -Wno-shadow compiler flags?
 
 You can pass this module without doing exercise 03.
 
-10
+## Chapter VII
 
-Chapter VII
 Submission and peer-evaluation
 Turn in your assignment in your Git repository as usual. Only the work inside your
 repository will be evaluated during the defense. Don’t hesitate to double check the

@@ -26,13 +26,13 @@ hard: $(HARD_TARGET)
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
+$(HARD_TARGET): $(HARD_OBJS)
+	$(CXX) $(CXXFLAGS) -o $(HARD_TARGET) $(HARD_OBJS)
+
 $(OBJS): | $(OBJDIR)
 
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
-
-$(HARD_TARGET): $(HARD_OBJS)
-	$(CXX) $(CXXFLAGS) -o $(HARD_TARGET) $(HARD_OBJS)
 
 # Compile source files to object files in the obj directory
 $(OBJDIR)/%.o: %.cpp

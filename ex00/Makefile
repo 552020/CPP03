@@ -12,7 +12,6 @@ HARD_SRCS = mainHard.cpp ClapTrapHard.cpp ClapTrapRegistry.cpp
 
 # Create an obj directory if it doesn't exist
 OBJDIR = obj
-$(shell mkdir -p $(OBJDIR))
 
 # Generate object files from source files in the obj directory
 OBJS = $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
@@ -27,6 +26,11 @@ hard: $(HARD_TARGET)
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
+$(OBJS): | $(OBJDIR)
+
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+
 $(HARD_TARGET): $(HARD_OBJS)
 	$(CXX) $(CXXFLAGS) -o $(HARD_TARGET) $(HARD_OBJS)
 
@@ -35,6 +39,7 @@ $(OBJDIR)/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
+	rm -rf $(OBJDIR)
 	rm -f $(OBJS) $(TARGET) $(HARD_OBJS) $(HARD_TARGET)
 
 fclean: clean

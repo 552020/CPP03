@@ -7,7 +7,7 @@ ClapTrap::ClapTrap() : _name("Deffy"), _hitPoints(10), _energyPoints(10), _attac
 }
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap name constructor called" << std::endl;
+	std::cout << "ClapTrap parameter constructor called" << std::endl;
 	std::cout << "ClapTrap " << _name << " has been created! " << std::endl;
 }
 ClapTrap::ClapTrap(const ClapTrap &source)

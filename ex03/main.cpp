@@ -6,10 +6,17 @@
 
 int main()
 {
+	std::cout << "\n--- Creating the robots ---\n";
+	std::cout << "\n***ClapTrap clappy(\"Clappy\");***\n";
 	ClapTrap clappy("Clappy");
+	std::cout << "\n***ScavTrap scavvy(\"Scavvy\");***\n";
 	ScavTrap scavvy("Scavvy");
+	std::cout << "\n***FragTrap fraggy(\"Fraggy\");***\n";
 	FragTrap fraggy("Fraggy");
+	std::cout << "\n***DiamondTrap diammy(\"Diammy\");***\n";
 	DiamondTrap diammy("Diammy");
+	std::cout << "\n***diammy.whoAmI();***\n";
+	diammy.whoAmI();
 
 	std::cout << std::endl;
 
@@ -44,6 +51,9 @@ int main()
 	diammy.takeDamage(20);
 	diammy.beRepaired(10);
 	diammy.highFivesGuys();
+
+	std::cout << std::endl;
+	std::cout << "\n--- Destructors ---\n";
 
 	return 0;
 }

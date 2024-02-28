@@ -2,8 +2,6 @@
 
 #include "DiamondTrap.hpp"
 // Default constructor
-// Mind that this work only if the base class has a default constructor and also
-// if ScavTrap and FragTrap have a default constructor
 DiamondTrap::DiamondTrap() : ClapTrap("Deffy_clap_name"), ScavTrap(), FragTrap()
 {
 	std::cout << "Default DiamonTrap constructor called" << std::endl;

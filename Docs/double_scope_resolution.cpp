@@ -4,7 +4,12 @@
 class Grandparent
 {
   public:
-	std::string grandparentName = "Grandparent";
+	std::string grandparentName;
+
+	// C++98 Constructor
+	Grandparent() : grandparentName("Grandparent")
+	{
+	}
 };
 
 class Parent : public Grandparent
@@ -18,16 +23,11 @@ class Child : public Parent
 int main()
 {
 	Child myChild;
+	std::cout << "Accessing through the Child class: " << myChild.Parent::Grandparent::grandparentName << std::endl;
 
-	// INCORRECT ATTEMPT (will cause compiler error):
-	// std::cout << myChild.Parent::Grandparent::grandparentName << std::endl;
-
-	// CORRECT WAYS:
-
-	// Option 1: Direct access (since grandparentName is public)
 	std::cout << "Direct access: " << myChild.grandparentName << std::endl;
-
-	// Option 2: Add a getter to Parent or Grandparent (if needed)
+	std::string temp = myChild.Parent::Grandparent::grandparentName;
+	std::cout << "Accessing through a temporary variable: " << temp << std::endl;
 
 	return 0;
 }

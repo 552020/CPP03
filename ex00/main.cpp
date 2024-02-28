@@ -3,27 +3,36 @@
 
 int main()
 {
-	std::cout << "ClapTrap clappy(\"Clappy\");" << std::endl;
+	std::cout << "***ClapTrap clappy(\"Clappy\");***" << std::endl;
 	ClapTrap clappy("Clappy");
-	std::cout << "\nClapTrap trappy(\"Trappy\");" << std::endl;
+
+	std::cout << "\n***ClapTrap trappy(\"Trappy\");***" << std::endl;
 	ClapTrap trappy("Trappy");
-	std::cout << "\nclappy.attack(\"Trappy\");" << std::endl;
+
+	std::cout << "\n***clappy.attack(\"Trappy\");***" << std::endl;
 	clappy.attack("Trappy");
-	std::cout << "\ntrappy.takeDamage(20);" << std::endl;
+
+	std::cout << "\n***trappy.takeDamage(20);***" << std::endl;
 	trappy.takeDamage(20);
-	std::cout << "\ntrappy.beRepaired(10);" << std::endl;
+
+	std::cout << "\n***trappy.beRepaired(10);***" << std::endl;
 	trappy.beRepaired(10);
-	std::cout << "\nclappy.attack(\"ClapTrap_Two\");" << std::endl;
+
+	std::cout << "\n***clappy.attack(\"ClapTrap_Two\");***" << std::endl;
 	clappy.attack("ClapTrap_Two");
+
 	std::cout << "\nClapTrap fuffy = clappy;" << std::endl;
 	ClapTrap fuffy = clappy;
+
 	std::cout << "\nfuffy's name (the name of the object) 'fuffy' is " << fuffy.getName() << std::endl;
-	std::cout << "\nfuffy.setName(\"Fuffy\");" << std::endl;
+	std::cout << "\n***fuffy.setName(\"Fuffy\");***" << std::endl;
 	fuffy.setName("Fuffy");
 	std::cout << "fuffy's name (the name of the fuffy object) is " << fuffy.getName() << std::endl;
-	std::cout << "\nfuffy.attack(\"Trappy\");" << std::endl;
+
+	std::cout << "\n***fuffy.attack(\"Trappy\");***" << std::endl;
 	fuffy.attack("Trappy");
-	// When Trappy is destroyed also Clanppy_Two is destroyed
+
+	std::cout << "\nDestructor for clappy, trappy, and fuffy will be called now!";
 
 	return 0;
 }

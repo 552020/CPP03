@@ -7,6 +7,7 @@
 class ClapTrap
 {
 	// private:
+	// if they would be private, derived classes would not be able to access them
   protected:
 	std::string _name;
 	int _hitPoints;

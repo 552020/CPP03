@@ -30,7 +30,7 @@ FragTrap::~FragTrap()
 };
 void FragTrap::highFivesGuys()
 {
-	std::cout << "FragTrap " << _name << " is requesting a high five!" << std::endl;
+	std::cout << "FragTrap " << _name << " is requesting a high five to the g***!" << std::endl;
 };
 
 void FragTrap::attack(const std::string &target)

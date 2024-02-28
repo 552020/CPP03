@@ -22,7 +22,5 @@ int main()
 
 	std::cout << std::endl;
 
-	// Objects are destroyed in the reverse order of their creation
-	// FragTrap destroyed first, then ScavTrap, then ClapTrap
 	return 0;
 }

@@ -1,5 +1,8 @@
-# CPP_Module_03
+# CPP03
 
+**C++ module for the core curriculum @42Berlin**
+
+_Topics_:
 - Inheritance
 
 ## 00: Aaaaaand... OPEN
